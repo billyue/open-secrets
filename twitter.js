@@ -184,40 +184,18 @@ Twitter.prototype.fetchTimelines = function(elm) {
         }
 
         var tweetView = $("<div>").attr("class", "tweet").append(
-          $("<div>").attr("class", "tweet-icon").append(
-            $("<img>").attr("src", user.profile_image_url_https)
-          ),
           $("<div>").attr("class", "tweet-detail").append(
             $("<a>").attr(
               "href",
               "http://twitter.com/" + user.screen_name
             ).attr("target", "_blank").text(user.name),
             $("<pre>").html(normalizeTweetText(tweet))
-          ),
-          $("<div>").attr("class", "tweet-info").append(
-            $("<ul>").append(
-              $("<li>").append(source),
-              $("<li>").append(
-                $("<a>").attr(
-                  "href",
-                  "https://twitter.com/" + user.screen_name + "/status/" + tweet.id_str
-                ).attr(
-                  "target",
-                  "_blank"
-                ).text(normalizeDateTime(new Date(tweet.created_at)))
-              )
-            )
           )
         );
 
         if (retweeted) {
           tweetView.append(
-            $("<div>").attr("class", "retweet-info").append(
-              $("<span>").append(
-                $("<i>").attr("class", "retweet-icon")
-              ),
-              $("<span>").css("color", "#336699").text("Retweeted by " + tweet.retweet_user.name)
-            )
+            $("<div>").attr("class", "retweet-info")
           );
         }
 

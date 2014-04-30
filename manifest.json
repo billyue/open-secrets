@@ -12,7 +12,7 @@
   ],
   "browser_action": {
     "default_title": "Chrome Extension - Twitter OAuth Demo -",
-    "default_icon": "star.png",
+    "default_icon": "twitter-icon.png",
     "default_popup": "popup.html"
   },
   "background": {
