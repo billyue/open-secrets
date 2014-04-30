@@ -185,10 +185,6 @@ Twitter.prototype.fetchTimelines = function(elm) {
 
         var tweetView = $("<div>").attr("class", "tweet").append(
           $("<div>").attr("class", "tweet-detail").append(
-            $("<a>").attr(
-              "href",
-              "http://twitter.com/" + user.screen_name
-            ).attr("target", "_blank").text(user.name),
             $("<pre>").html(normalizeTweetText(tweet))
           )
         );
