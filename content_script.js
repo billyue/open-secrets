@@ -6,7 +6,7 @@ if (pinElement !== null && document.referrer.match(/oauth_consumer_key=([^&]+)/)
 
     chrome.extension.sendRequest({ "verifier": pin }, function(isSuccess) {
       if (isSuccess === true) {
-        alert("Authorized, woot!");
+        //alert("Authorized, woot!");
       }
     });
   }
