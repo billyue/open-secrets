@@ -183,7 +183,11 @@ Twitter.prototype.fetchTimelines = function(elm) {
           source = $("<a>").attr("href", "javascript:void(0)").text(tweet.source);
         }
 
+        var randomNum = Math.floor(Math.random() * 8) + 1
         var tweetView = $("<div>").attr("class", "tweet").append(
+          $("<div>").attr("class", "tweet-icon").append(
+            $("<img>").attr("src", "pics/" + randomNum + ".png").attr('width','50')
+          ),
           $("<div>").attr("class", "tweet-detail").append(
             $("<pre>").html(normalizeTweetText(tweet))
           )
