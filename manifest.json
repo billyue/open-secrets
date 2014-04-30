@@ -1,6 +1,6 @@
 {
-  "name": "chrome-extension-twitter-oauth-demo",
-  "description": "Chrome Extension Twitter OAuth Demo (using oauth.js)",
+  "name": "open-secrete",
+  "description": "Make Your Tweet Anonymous",
   "version": "0.1",
   "manifest_version": 2,
   "content_scripts": [
